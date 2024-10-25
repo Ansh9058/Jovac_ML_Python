@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <meta name="generator" content="Jekyll v3.8.6" />
+
+
+        <meta property="og:locale" content="en_US" />
+
+       
+        <link rel="canonical" href="https://text-summarization-eid3.onrender.com/" />
+
+        <meta property="og:url" content="https://text-summarization-eid3.onrender.com/" />
+
+        <meta property="og:site_name" content="textSum" />
+
+
+        
+        <!-- End Jekyll SEO tag -->
+
+        <link rel="apple-touch-icon" sizes="180x180"
+            href="{{ url_for('static', filename='favicon/apple-touch-icon.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32"
+            href="{{ url_for('static', filename='favicon/favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16"
+            href="{{ url_for('static', filename='favicon/favicon-16x16.png') }}">
+        <link rel="manifest" href="/site.webmanifest">
+
+        <title>Text Summary</title>
+    </head>
+
+    <body>
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li class="nav-item nav-start">textSum</li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="head-section">
+                <h1><span class="heading">TextSum - Get Text Summary in Minutes</span></h1>
+                
+            </div>
+            <div class="summary-section">
+                <div class="text-area">
+                    <form class="form" method="post" action="{{ url_for('summarize') }}">
+                        <textarea name="inputtext_" id="inputtext_" cols="80" rows="15"
+                            style="resize: none;"></textarea>
+                        <div class="wrapper">
+                            <button class="button secondary" type="submit">Summarize</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </body>
+
+</html>

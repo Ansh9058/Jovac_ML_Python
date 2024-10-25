@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <title>Text Summary</title>
+
+
+        <meta property="og:locale" content="en_US" />
+
+        
+
+        <link rel="canonical" href="https://text-summarization-eid3.onrender.com/" />
+
+        <meta property="og:url" content="https://text-summarization-eid3.onrender.com/" />
+
+        <meta property="og:site_name" content="textSum" />
+
+        <!-- End Jekyll SEO tag -->
+
+        <link rel="apple-touch-icon" sizes="180x180"
+            href="{{ url_for('static', filename='favicon/apple-touch-icon.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32"
+            href="{{ url_for('static', filename='favicon/favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16"
+            href="{{ url_for('static', filename='favicon/favicon-16x16.png') }}">
+        <link rel="manifest" href="/site.webmanifest">
+    </head>
+
+    <body>
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li class="nav-item nav-start">textSum</li>
+            </ul>
+        </nav>
+        <div class="container">
+            <h4><b>Summary:</b></h4>
+            <div class="output">
+                <p>{{ data['summary'] }}</p>
+            </div>
+        </div>
+
+    </body>
+
+</html>
